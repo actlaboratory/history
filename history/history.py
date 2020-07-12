@@ -32,7 +32,7 @@ class History:
 		except:
 			return None
 
-	def getPrivious(self):
+	def getPrevious(self):
 		if self.cursor>0:
 			self.cursor-=1
 			return self.get(self.cursor)
