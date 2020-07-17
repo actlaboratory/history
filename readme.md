@@ -14,7 +14,7 @@
 
 ## インストール
 
-- pip install https://github.com/actlaboratory/history/archive/v1.0.1.zip
+- pip install https://github.com/actlaboratory/history/archive/v1.0.2.zip
 
 
 ## テスト
@@ -24,6 +24,8 @@
 
 ## 変更履歴
 
+- Version 1.0.2 2020.07.17
+	- SyntaxErrorとtestのタイポを修正
 - Version 1.0.1 2020.07.15
 	- 最大保存件数を0に設定するとadd()でエラーとなる不具合を修正
 - Version 1.0.0 2020.07.11
