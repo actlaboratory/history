@@ -18,7 +18,7 @@ class History:
 			while item in self.lst:
 				i=self.lst.index(item)
 				del self.lst[i]					#重複要素を削除
-		if len(self.lst)==self.maxCount && len(self.lst)>0:		#リストが満杯
+		if len(self.lst)==self.maxCount and len(self.lst)>0:		#リストが満杯
 			del self.lst[0]						#先頭の要素を削除
 		self.lst.append(item)					#末尾に追加
 		self.cursor=len(self.lst)-1				#カーソルを末尾へ移動
