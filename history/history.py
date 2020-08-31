@@ -3,6 +3,8 @@
 #Copyright (C) 2020 yamahubuki <itiro.ishino@gmail.com>
 #Note: All comments except these top lines will be written in Japanese. 
 
+import pickle
+
 class History:
 	def __init__(self,maxCount=20,allowDuplication=True):
 		"""履歴の保持件数、重複を許すか否かを指定"""
@@ -60,3 +62,16 @@ class History:
 
 	def isEmpty(self):
 		return len(self.lst)==0
+
+	def loadFile(self, fileName, dictKey):
+		with open(fileName, "rb") as f:
+			hist = pickle.load(f)
+			self.lst = hist[dictKey]
+			self.cursor = len(hist[dictKey]) - 1
+
+	def saveFile(self, fileName, dictKey):
+		with open(fileName, "rb") as f:
+			hist = pickle.load(f)
+			hist[dictKey] = self.lst
+		with open(fileName, "wb") as f:
+			pickle.dump(hist, f)
