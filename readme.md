@@ -14,7 +14,7 @@
 
 ## インストール
 
-- pip install https://github.com/actlaboratory/history/archive/v1.0.2.zip
+- pip install https://github.com/actlaboratory/history/archive/v1.0.3.zip
 
 
 ## テスト
@@ -24,6 +24,9 @@
 
 ## 変更履歴
 
+- Version 1.0.3 2020.08.31
+	- readmeの誤植を修正
+	- loadFile、saveFileを追加
 - Version 1.0.2 2020.07.17
 	- SyntaxErrorとtestのタイポを修正
 - Version 1.0.1 2020.07.15
