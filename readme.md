@@ -14,7 +14,7 @@
 
 ## インストール
 
-- pip install https://github.com/actlaboratory/history/archive/v1.0.3.zip
+- pip install https://github.com/actlaboratory/history/archive/v1.1.0.zip
 
 
 ## テスト
@@ -24,6 +24,8 @@
 
 ## 変更履歴
 
+- Version 1.1.0 2023.02.01
+	- loadFileにオプション「auto_create」を追加
 - Version 1.0.3 2020.08.31
 	- readmeの誤植を修正
 	- loadFile、saveFileを追加

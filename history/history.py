@@ -63,11 +63,20 @@ class History:
 	def isEmpty(self):
 		return len(self.lst)==0
 
-	def loadFile(self, fileName, dictKey):
-		with open(fileName, "rb") as f:
-			hist = pickle.load(f)
-			self.lst = hist[dictKey]
-			self.cursor = len(hist[dictKey]) - 1
+	def loadFile(self, fileName, dictKey, auto_create=False):
+		try:
+			with open(fileName, "rb") as f:
+				hist = pickle.load(f)
+				self.lst = hist[dictKey]
+				self.cursor = len(hist[dictKey]) - 1
+		except FileNotFoundError as e:
+			if auto_create:
+				with open(fileName, "wb") as f:
+					pickle.dump({}, f)
+					self.lst = []
+					self.cursor = 0
+			else:
+				raise e
 
 	def saveFile(self, fileName, dictKey):
 		with open(fileName, "rb") as f:
