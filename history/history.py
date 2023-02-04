@@ -72,7 +72,7 @@ class History:
 		except FileNotFoundError as e:
 			if auto_create:
 				with open(fileName, "wb") as f:
-					pickle.dump({}, f)
+					pickle.dump({dictKey:[]}, f)
 					self.lst = []
 					self.cursor = 0
 			else:
