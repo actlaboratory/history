@@ -1,7 +1,7 @@
 from .history import *
 
 __copyright__    = 'Copyright (C) 2020-2023 yamahubuki'
-__version__      = '1.1.1'
+__version__      = '1.2.0'
 __license__      = 'MIT'
 __author__       = 'yamahubuki'
 __author_email__ = 'itiro.ishino@gmail.com'

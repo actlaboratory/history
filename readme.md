@@ -24,6 +24,9 @@
 
 ## 変更履歴
 
+- Version 1.2.0 2023.02.06
+	- setList()を追加
+
 - Version 1.1.1 2023.02.04
 	- auto_createした直後、KeyErrorにならないよう修正
 - Version 1.1.0 2023.02.01

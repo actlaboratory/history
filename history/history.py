@@ -67,8 +67,7 @@ class History:
 		try:
 			with open(fileName, "rb") as f:
 				hist = pickle.load(f)
-				self.lst = hist[dictKey]
-				self.cursor = len(hist[dictKey]) - 1
+				self.setList(hist[dictKey])
 		except FileNotFoundError as e:
 			if auto_create:
 				with open(fileName, "wb") as f:
@@ -84,3 +83,7 @@ class History:
 			hist[dictKey] = self.lst
 		with open(fileName, "wb") as f:
 			pickle.dump(hist, f)
+
+	def setList(self,lst):
+		self.lst = lst
+		self.cursor = len(lst) - 1
